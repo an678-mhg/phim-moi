@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 1000;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+.trailer-container::-webkit-scrollbar {
+  display: none;
+}
+
+.trailer-container {
+  max-width: 100%;
+  background-color: #636e72;
+  overflow-y: auto;
+  width: 450px;
+  padding: 0 20px;
+}
+
+.trailer-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.trailer-name {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.trailer-title-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

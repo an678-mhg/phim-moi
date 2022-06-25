@@ -1,0 +1,39 @@
+.simular {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.simularColumn {
+  height: 600px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.simularColumn-title {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.simularColumn-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.simularColumn-img {
+  border-radius: 8px;
+
+  overflow: hidden;
+  width: 100px;
+  height: 178px;
+}
+
+.simularColumn-name {
+  width: calc(100% - 100px);
+  color: #fff;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.8;
+}

@@ -1,0 +1,23 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-image: url(https://www.cantechletter.com/wp-content/uploads/Netflix.jpg);
+  background-position: top center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.login-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.63);
+}

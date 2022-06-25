@@ -1,0 +1,18 @@
+.footer {
+  padding: 15px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.footer-name {
+  color: #fff;
+}
+
+.footer-contact {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

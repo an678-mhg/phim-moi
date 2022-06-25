@@ -1,0 +1,60 @@
+.login-form {
+  position: absolute;
+  z-index: 2;
+  width: 350px;
+  max-width: calc(100% - 16px);
+  background-color: #222;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.login-form-title {
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+}
+
+.login-form-social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.login-form-button {
+  margin: 10px 0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.login-form-button span {
+  margin-left: 10px;
+}
+
+.login-form-google {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.login-form-google:hover {
+  background-color: #e74d3ccb;
+}
+
+.login-form-facebook {
+  background-color: #45aaf2;
+  color: #fff;
+}
+
+.login-form-facebook:hover {
+  background-color: #45aaf2ce;
+}
+
+.disableButton {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

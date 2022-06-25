@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.disabled-link {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body {
+  background-color: #333;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.App {
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-gap-20px-20px {
+  grid-gap: 20px;
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.load-more {
+  text-align: center;
+  margin: 30px;
+}
+
+.load-more-button {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.load-more-button:hover {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e74c3c;
+  border-radius: 4px;
+  height: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.skeleton {
+  animation: skeleton 0.6s linear infinite alternate;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.mr-bottom-20px {
+  margin-bottom: 20px !important;
+}
+
+.mr-top-20px {
+  margin-top: 20px !important;
+}
+
+.skeleton-text {
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.last-child {
+  margin-bottom: 0px !important;
+  width: 80%;
+}
+
+.h-36px {
+  height: 36px;
+}
+
+.h-20px {
+  height: 20px;
+}
+
+.line-clamp-1,
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}

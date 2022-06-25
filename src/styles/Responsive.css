@@ -1,0 +1,197 @@
+/* Mobile */
+@media (max-width: 739px) {
+  .cast {
+    grid-template-columns: 1fr;
+  }
+  .genres .btn {
+    margin: 5px 0;
+    margin-right: 5px;
+  }
+  .skeleton-img {
+    height: 500px;
+  }
+  .searchResults-container {
+    grid-template-columns: 1fr;
+  }
+  .watch-tv-link {
+    height: 150px;
+  }
+  .esp-list {
+    height: 80px;
+  }
+  .banner-info {
+    width: 100%;
+  }
+  .banner-poster {
+    display: none;
+  }
+  .banner-content {
+    margin-top: 40px;
+  }
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-list .header-logo {
+    display: none;
+  }
+  .header-list {
+    position: fixed;
+    top: 0;
+    background-color: #111;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    left: 0;
+  }
+  .nav-menu {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0 !important;
+  }
+  ul.nav-menu li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+  }
+  ul.nav-menu li a.active::after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: #e74c3c;
+    right: 0;
+    top: 0;
+    bottom:0;
+    position: absolute;
+    border-radius: 4px;
+  }
+  .genres-list {
+    position: static;
+  }
+  .skeleton-img {
+    height: 250px;
+  }
+  .watch-link {
+    margin-bottom: 20px;
+  }
+  .header-logo-mobile {
+    display: block;
+  }
+  .header-logo-mobile span {
+    font-size: 20px;
+    color: #fff;
+  }
+  .esp-list {
+    height: 150px;
+  }
+  .toggle-menu-icon {
+    display: flex !important;
+  }
+  .banner-info-overview {
+    display: none;
+  }
+  .banner-info-title {
+    font-size: 16px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .cast {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .skeleton-img {
+    height: 300px;
+  }
+  .searchResults-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .esp-list {
+    height: 100px;
+  }
+  .grid-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .skeleton-img {
+    height: 350px;
+  }
+  .esp-item-img {
+    width: 30%;
+  }
+  .banner-info-title {
+    font-size: 25px;
+  }
+}
+
+/* Tablet and Mobile */
+@media (max-width: 1023px) {
+  .details-poster {
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  .details-info {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .simularMovie {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .watch-tv {
+    width: 100%;
+  }
+  .watch-tv-other-season {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+  .watch-wrap {
+    width: 100%;
+  }
+  .watch-tv-link {
+    flex-direction: row;
+    height: 200px;
+  }
+  .watch-tv-season-img {
+    width: 40%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+  .info-esp-season {
+    width: 60%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  .deltele-favorite {
+    display: block !important;
+    opacity: 0.7;
+  }
+  .watch-tv-other-season {
+    margin-top: 40px;
+  }
+  .banner-poster {
+    display: none;
+  }
+  .banner-info-overview {
+    display: none;
+  }
+
+  .banner::after {
+    display: none;
+  }
+  .banner {
+    aspect-ratio: 16/10;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    aspect-ratio: 2/1;
+  }
+}

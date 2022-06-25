@@ -1,0 +1,40 @@
+.error {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-body h1 {
+  font-size: 100px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.error-body p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.error-body a {
+  padding: 10px 15px;
+  background-color: #2980b9;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.2s all ease-in;
+}
+
+.error-body a:hover {
+  padding: 10px 30px;
+}

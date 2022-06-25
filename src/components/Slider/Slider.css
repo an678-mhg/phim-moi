@@ -1,0 +1,56 @@
+.swiper-container {
+  height: auto;
+}
+
+.slider {
+  margin: 40px 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.title h1 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 20px;
+}
+
+.image-slider {
+  transition: all 0.4s linear;
+}
+
+.image-slider:hover {
+  opacity: 0.5;
+}
+
+.movie-item {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 9/16;
+}
+
+.movie-item:hover .movie-title {
+  color: #e74c3c;
+}
+
+.movie-title {
+  font-size: 12px;
+  background-color: #222;
+  font-weight: 500;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  height: 50px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

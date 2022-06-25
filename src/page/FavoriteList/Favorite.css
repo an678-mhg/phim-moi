@@ -1,0 +1,35 @@
+.favorite {
+  margin-bottom: 40px;
+  margin-top: 80px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.favorite-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.not-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-favorite {
+  position: relative;
+}
+
+.image-favorite:hover .deltele-favorite {
+  display: block;
+}
+
+.deltele-favorite {
+  position: absolute;
+  top: 0;
+  padding: 10px;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}

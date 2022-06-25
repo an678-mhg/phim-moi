@@ -1,0 +1,141 @@
+.watch-movie-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  animation: fadeIn 0.5s linear;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.watch-wrap {
+  width: 76%;
+}
+
+.watch-movie {
+  aspect-ratio: 16/9;
+}
+
+.simularMovie {
+  width: 20%;
+}
+
+.movie-name {
+  color: #fff;
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.movie-overview {
+  color: #fff;
+}
+
+.movie-release_date {
+  color: #fff;
+  margin: 20px 0;
+}
+
+.watch-tv-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.watch-tv {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.watch-tv-in4 {
+  width: 100%;
+}
+
+.watch-tv-other-season {
+  width: 22%;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.watch-tv-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.watch-tv-link:last-child {
+  margin-bottom: 0px;
+}
+
+.watch-tv-season-img {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.info-esp-season {
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  padding: 10px 5px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.esp {
+  transition: height linear 1s;
+}
+
+.esp-list {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+  height: 80px;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #fff;
+}
+
+.esp-list.active {
+  background-color: #e67e22;
+}
+
+.esp-item {
+  display: flex;
+  height: 100%;
+}
+
+.esp-item-img {
+  width: 50%;
+}
+
+.esp-item-name {
+  height: 100%;
+  padding: 5px 10px;
+  width: 50%;
+}
+
+.watch-tv-in4 h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.watch-tv-in4 p {
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
