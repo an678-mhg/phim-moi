@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import { API_KEY, BASE_URL } from "../../utils/constans";
 import Button from "../../components/Button/Button";
-import ReactStars from "react-rating-stars-component";
 import "./Details.css";
 import { Link } from "react-router-dom";
 import Cast from "../../components/Cast/Cast";
