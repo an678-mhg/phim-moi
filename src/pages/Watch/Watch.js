@@ -3,7 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { BASE_URL, API_KEY } from "../../utils/constans";
 import Simular from "../../components/Simular/Simular";
 import Title from "../../utils/Title";
-import Comment from "../../components/FormPostComment/Comment";
+import Comment from "../../components/Comments/Comment";
 
 function Watch() {
   const { esp, season, id } = useParams();

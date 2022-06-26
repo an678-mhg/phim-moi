@@ -4,7 +4,7 @@ import { API_KEY, BASE_URL } from "../../utils/constans";
 import SimularColumn from "../../components/Simular/SimularColumn";
 import "./Watch.css";
 import Title from "../../utils/Title";
-import Comment from "../../components/FormPostComment/Comment";
+import Comment from "../../components/Comments/Comment";
 
 function WatchMovie() {
   const params = useParams();

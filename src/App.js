@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
-import ErrorPage from "./page/404/404Page";
+import ErrorPage from "./pages/404/404Page";
 import Footer from "./components/Footer/Footer";
 import { route } from "./route";
 import "./App.css";
@@ -11,7 +11,7 @@ import { auth } from "./config/firebase";
 import { useStore } from "./stored/store";
 import { fetchMovieFavorite } from "./actions/fireStoreActions";
 import PrivateRoute from "./utils/PrivateRoute";
-import FavoriteList from "./page/FavoriteList/FavoriteList";
+import FavoriteList from "./pages/FavoriteList/FavoriteList";
 import Loading from "./components/Loading/Loading";
 
 function App() {

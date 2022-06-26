@@ -1,8 +1,8 @@
 .header {
-  padding: 10px 16px;
+  padding: 16px;
   font-size: 30px;
   color: #fff;
-  transition: all ease-in-out 0.3s;
+  transition: 0.7s;
   margin: 0;
   width: 100%;
   display: flex;
@@ -14,6 +14,10 @@
   left: 0;
   right: 0;
   z-index: 999;
+}
+
+.header.sticky {
+  background-color: #2f3640;
 }
 
 .header-logo {

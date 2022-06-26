@@ -14,6 +14,7 @@ import { addMovieFromPlaylist } from "../../actions/fireStoreActions";
 import Loading from "../../components/Loading/Loading";
 import { addMovieLocal } from "../../utils/localStro";
 import { useStore } from "../../stored/store";
+import StarRatings from "react-star-ratings";
 
 function DetailsMovie() {
   const param = useParams();
@@ -132,11 +133,14 @@ function DetailsMovie() {
                   ))}
               </div>
               <div className="ratings">
-                <ReactStars
-                  count={10}
-                  size={data.vote_average}
-                  color="yellow"
-                />{" "}
+                <StarRatings
+                  rating={data.vote_average}
+                  starRatedColor="#e74c3c"
+                  numberOfStars={10}
+                  name="rating"
+                  starDimension="15px"
+                  starSpacing="2px"
+                />
                 <div className="ratings-count">{`(${
                   data.vote_count || 0
                 } vote)`}</div>

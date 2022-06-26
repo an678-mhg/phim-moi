@@ -17,6 +17,25 @@ function Header() {
     setShowMenu(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const handleFixedHeader = () => {
+      const header = hederRef.current;
+      const sticky = header.offsetTop;
+
+      if (header) {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleFixedHeader);
+
+    return () => window.removeEventListener("scroll", handleFixedHeader);
+  }, []);
+
   return (
     <div ref={hederRef} className="header">
       <div

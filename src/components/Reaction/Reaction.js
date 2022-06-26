@@ -66,6 +66,7 @@ const Reaction = ({ comment, setShowReaction }) => {
               height: "25px",
               objectFit: "cover",
               margin: "0 4px",
+              cursor: "pointer",
             }}
             src={item.image}
           />

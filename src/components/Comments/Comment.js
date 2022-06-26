@@ -1,10 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./Comment.css";
 import "boxicons";
-import {
-  fecthCommentFromApi,
-  postComment,
-} from "../../actions/fireStoreActions";
+import { postComment } from "../../actions/fireStoreActions";
 import { useStore } from "../../stored/store";
 import Input from "./Input";
 import CommentItem from "./CommentItem";
@@ -15,7 +12,7 @@ const Comment = ({ movieId }) => {
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handlePostComment = async (e) => {
+  const handlePostComment = (e) => {
     e.preventDefault();
     if (!user) return;
     if (comment.trim() === "") return;
@@ -47,7 +44,9 @@ const Comment = ({ movieId }) => {
 
   return (
     <div className="comment">
-      <h1 className="comment-title">Comments</h1>
+      <h1 className="comment-title">
+        Comments {document.filter((item) => item.responseTo === null).length}{" "}
+      </h1>
       <form onSubmit={handlePostComment}>
         <Input
           user={user}
@@ -57,9 +56,18 @@ const Comment = ({ movieId }) => {
         />
 
         <div className="show-comment">
-          {document?.map((item) => (
-            <CommentItem item={item} key={item.id} />
-          ))}
+          {document?.map((item) => {
+            if (item.responseTo === null) {
+              return (
+                <CommentItem
+                  movieId={movieId}
+                  item={item}
+                  key={item.id}
+                  listComment={document}
+                />
+              );
+            }
+          })}
         </div>
       </form>
     </div>
