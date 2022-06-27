@@ -48,12 +48,22 @@ const CommentItem = ({ item, movieId, listComment }) => {
           <div className="show-comment-info">
             <div className="show-comment-name-time">
               <h3>{item.userName}</h3>
+              <p>{calculateCreatedTime(item.created_at)}</p>
             </div>
-            <p>{item.content}</p>
+            <p>
+              {item.responseTo !== null && (
+                <span style={{ color: "#2980b9", marginRight: "5px" }}>
+                  {listComment.find((p) => p.id === item.responseTo).userName}
+                </span>
+              )}
+              {item.content}
+            </p>
 
-            {showReaction && (
-              <Reaction comment={item} setShowReaction={setShowReaction} />
-            )}
+            <Reaction
+              comment={item}
+              showReaction={showReaction}
+              setShowReaction={setShowReaction}
+            />
             {item?.reactions?.length > 0 && (
               <ShowReaction reactions={item.reactions} />
             )}
@@ -81,7 +91,6 @@ const CommentItem = ({ item, movieId, listComment }) => {
               <p onClick={() => setShowReply(!showReply)}>
                 {showReply ? "Cancel" : "Feedback"}
               </p>
-              <p>{calculateCreatedTime(item.created_at)}</p>
             </div>
           )}
         </div>

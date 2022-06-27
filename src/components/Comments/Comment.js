@@ -44,9 +44,7 @@ const Comment = ({ movieId }) => {
 
   return (
     <div className="comment">
-      <h1 className="comment-title">
-        Comments {document.filter((item) => item.responseTo === null).length}{" "}
-      </h1>
+      <h1 className="comment-title">Comments {document.length}</h1>
       <form onSubmit={handlePostComment}>
         <Input
           user={user}

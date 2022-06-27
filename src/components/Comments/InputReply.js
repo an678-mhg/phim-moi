@@ -25,16 +25,14 @@ const InputReply = ({ user, commentParentId, movieId, setShowReply }) => {
   };
 
   return (
-    <div>
-      <div
-        className="comment-control"
-        style={{ marginLeft: "40px", marginTop: "20px" }}
-      >
-        <img
-          className="avatar"
-          alt="avatar"
-          src={user ? user?.photoURL : nonAvatar}
-        />
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <img
+        className="avatar"
+        alt="avatar"
+        src={user ? user?.photoURL : nonAvatar}
+      />
+
+      <div className="comment-control" style={{ marginTop: "20px" }}>
         <input
           value={comment}
           onChange={(e) => setComment(e.target.value)}

@@ -4,7 +4,7 @@ import { db } from "../../config/firebase";
 import { useStore } from "../../stored/store";
 import reactionGif from "../../utils/reactionGif";
 
-const Reaction = ({ comment, setShowReaction }) => {
+const Reaction = ({ comment, setShowReaction, showReaction }) => {
   const { user } = useStore((state) => state);
 
   const handleReact = (type) => {
@@ -45,8 +45,8 @@ const Reaction = ({ comment, setShowReaction }) => {
         background: "#222",
         borderRadius: "20px",
         padding: "4px",
-        display: "flex",
         alignItems: "center",
+        display: showReaction ? "flex" : "none",
       }}
     >
       {reactionGif.map((item) => (

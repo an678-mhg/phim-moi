@@ -8,18 +8,28 @@
 }
 
 .comment-control {
-  position: relative;
+  display: flex;
+  outline: none;
+  background-color: transparent;
+  align-items: center;
+  flex: 1;
+  height: 45px;
+  margin-left: 10px;
 }
 
 .comment-control input {
-  width: 100%;
-  padding: 14px 55px;
-  border-radius: 15px;
+  flex: 1;
+  padding: 10px 16px;
+  height: 100%;
+  background-color: #222;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   outline: none;
-  border: 1px solid #222;
-  background-color: transparent;
   color: #fff;
   font-size: 14px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .comment-control input::placeholder {
@@ -28,32 +38,25 @@
   opacity: 0.6;
 }
 
-.comment-control .avatar {
+.avatar {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  position: absolute;
-  left: 27px;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .comment-control .send-icon {
   height: 100%;
-  padding: 10px 20px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  transform: translateY(-50%);
+  padding: 10px 12px;
   border: none;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   color: #fff;
   background-color: transparent;
-  border-left: 1px solid #222;
+  border-left: 1px solid #3498db;
   cursor: pointer;
+  background-color: #3498db;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .show-comment {
@@ -121,8 +124,6 @@
   padding-left: 10px;
   padding-right: 20px;
   position: relative;
-  min-width: 300px;
-  max-width: 100%;
 }
 
 .show-comment-info p {
@@ -162,7 +163,7 @@
 }
 
 .reation img:hover{
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .show-reaction {

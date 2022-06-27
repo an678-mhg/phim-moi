@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Title from "../../utils/Title";
+import Tippy from "@tippyjs/react/headless";
 import "./Search.css";
 
 function Search() {
@@ -23,16 +24,18 @@ function Search() {
       {/* Change document title */}
       <Title title={"Search"} />
 
-      <div className="search-input">
-        <input
-          onChange={onChangeInput}
-          value={keyWord}
-          placeholder="Search...."
-          className="search-text"
-          type="text"
-        />
-        <input className="search-submit" type="submit" value="Search" />
-      </div>
+      <Tippy render={(attrs) => <div {...attrs}>My tippy box</div>}>
+        <div className="search-input">
+          <input
+            onChange={onChangeInput}
+            value={keyWord}
+            placeholder="Search...."
+            className="search-text"
+            type="text"
+          />
+          <input className="search-submit" type="submit" value="Search" />
+        </div>
+      </Tippy>
     </form>
   );
 }

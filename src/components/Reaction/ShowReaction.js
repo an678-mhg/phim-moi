@@ -4,11 +4,22 @@ import reactionImg from "../../utils/reactionImg";
 const ShowReaction = ({ reactions }) => {
   const [totalTypeReaction, setTotalTypeReaction] = useState([]);
 
+  useEffect(() => {
+    const arrTmp = [];
+    reactions.map((item) => {
+      if (!arrTmp.includes(item.type)) {
+        arrTmp.push(item.type);
+      }
+    });
+
+    setTotalTypeReaction(arrTmp);
+  }, [reactions]);
+
   return (
     <div className="show-reaction">
       <div className="show-reaction-list">
-        {reactions.map((item) => (
-          <img key={item.userId} src={reactionImg[item.type]} alt={item.type} />
+        {totalTypeReaction.map((item) => (
+          <img key={item.userId} src={reactionImg[item]} alt={item} />
         ))}
       </div>
       <div>
