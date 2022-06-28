@@ -35,7 +35,7 @@ function App() {
         unsub();
       };
     });
-  }, []);
+  }, [setFavoriteList, setUser]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

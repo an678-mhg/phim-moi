@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MovieItem from "../../components/Movie/MovieItem";
 import Skeleton from "../../components/Skeleton/Skeleton";
@@ -23,8 +23,8 @@ function SearchResults() {
     setPage(page + 1);
   };
 
-  useEffect(() => {
-    const searchKeywordforUser = (keyword) => {
+  const searchKeywordforUser = useCallback(
+    (keyword) => {
       if (keyword.trim() === "") return;
       fetch(
         `${BASE_URL}/search/multi?api_key=${API_KEY}&query=${keyword}&page=${page}`
@@ -32,16 +32,21 @@ function SearchResults() {
         .then((res) => res.json())
         .then((data) => {
           setTotalPage(data.total_pages);
-          setResults([...results, ...data.results]);
+          setResults((prev) => [...prev, ...data.results]);
           setLoading(false);
         })
-        .catch((err) => console.log(err));
-    };
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+        });
+    },
+    [page]
+  );
 
+  useEffect(() => {
     setLoading(true);
-
     searchKeywordforUser(keyword);
-  }, [page, keyword]);
+  }, [page, keyword, searchKeywordforUser]);
 
   if (!loading && results.length === 0) {
     return (

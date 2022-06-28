@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import MovieItem from "../../components/Movie/MovieItem";
 import Skeleton from "../../components/Skeleton/Skeleton";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { API_KEY, BASE_URL } from "../../utils/constans";
 import Title from "../../utils/Title";
 
@@ -18,27 +18,24 @@ const Movies = () => {
     });
   };
 
-  const navigate = useNavigate();
+  const fetchMovieGenres = useCallback(() => {
+    fetch(`${BASE_URL}/movie/upcoming?api_key=${API_KEY}&page=${page}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setMovies((prev) => [...prev, ...data.results]);
+        setTotalPage(data.total_pages);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
+  }, [page]);
 
   useEffect(() => {
     setLoading(true);
-    const fetchMovieGenres = () => {
-      fetch(`${BASE_URL}/movie/upcoming?api_key=${API_KEY}&page=${page}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setMovies([...movies, ...data.results]);
-          setTotalPage(data.total_pages);
-          setLoading(false);
-        })
-        .catch((err) => {
-          setLoading(false);
-          navigate("/error_page");
-          return err;
-        });
-    };
-
     fetchMovieGenres();
-  }, [page]);
+  }, [page, fetchMovieGenres]);
 
   const LoadMore = () => {
     setPage(page + 1);

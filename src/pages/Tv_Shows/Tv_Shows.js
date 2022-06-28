@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import MovieItem from "../../components/Movie/MovieItem";
 import Skeleton from "../../components/Skeleton/Skeleton";
 import { Link } from "react-router-dom";
@@ -18,17 +18,24 @@ const Tv_Shows = () => {
     });
   };
 
-  useEffect(() => {
-    setLoading(true);
+  const getTvShow = useCallback(() => {
     fetch(`${BASE_URL}/tv/on_the_air?api_key=${API_KEY}&page=${page}`)
       .then((res) => res.json())
       .then((data) => {
-        setMovies([...movies, ...data.results]);
+        setMovies((prev) => [...prev, ...data.results]);
         setTotalPage(data.total_pages);
         setLoading(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }, [page]);
+
+  useEffect(() => {
+    setLoading(true);
+    getTvShow();
+  }, [page, getTvShow]);
 
   const LoadMore = () => {
     setPage(page + 1);

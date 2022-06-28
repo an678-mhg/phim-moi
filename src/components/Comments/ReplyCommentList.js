@@ -15,6 +15,8 @@ const ReplyCommentList = ({ listComment, commentParentId, movieId }) => {
             />
           );
         }
+
+        return null;
       })}
     </div>
   );

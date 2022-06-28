@@ -5,6 +5,7 @@ import "./Banner.css";
 
 const Banner = () => {
   const [banner, setBanner] = useState();
+
   useEffect(() => {
     function getBanner() {
       fetch(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`)

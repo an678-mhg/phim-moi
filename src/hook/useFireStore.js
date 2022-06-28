@@ -39,7 +39,7 @@ const useFireStore = (table, conditional) => {
     return () => {
       unsubscribe();
     };
-  }, [table, conditional]);
+  }, [table, fieldName, operator, compareValue]);
 
   return { document, loading, error };
 };

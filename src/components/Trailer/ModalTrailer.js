@@ -17,7 +17,9 @@ function ModalTrailer({ show, setShow }) {
         .then((data) => {
           setTrailers(data.results);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+        });
     };
 
     getTrailer(media_type, id);

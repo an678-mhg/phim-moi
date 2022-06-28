@@ -1,5 +1,5 @@
 import { doc, updateDoc } from "firebase/firestore";
-import React, { useTransition } from "react";
+import React from "react";
 import { db } from "../../config/firebase";
 import { useStore } from "../../stored/store";
 import reactionGif from "../../utils/reactionGif";
@@ -69,6 +69,7 @@ const Reaction = ({ comment, setShowReaction, showReaction }) => {
               cursor: "pointer",
             }}
             src={item.image}
+            alt={item.name}
           />
           {comment?.reactions.some((item) => item.userId === user.uid) &&
             comment?.reactions.find((item) => item.userId === user.uid).type ===

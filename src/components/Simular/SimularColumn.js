@@ -15,7 +15,9 @@ function SimularColumn() {
       fetch(`${BASE_URL}/movie/${id}/similar?api_key=${API_KEY}`)
         .then((res) => res.json())
         .then((data) => setData(data.results))
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+        });
     };
 
     getSiular(id);

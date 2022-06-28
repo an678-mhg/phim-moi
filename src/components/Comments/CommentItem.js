@@ -22,7 +22,7 @@ const CommentItem = ({ item, movieId, listComment }) => {
       }
     });
     setCountReply(count);
-  }, [listComment]);
+  }, [listComment, item.id]);
 
   useEffect(() => {
     if (!user) {
@@ -36,7 +36,7 @@ const CommentItem = ({ item, movieId, listComment }) => {
     if (reactionApi) {
       setReaction(reactionApi);
     }
-  }, [item.reactions]);
+  }, [item.reactions, user]);
 
   return (
     <div style={{ marginBottom: "30px" }}>

@@ -22,7 +22,7 @@ const ListResults = ({ results, loading, keyWord }) => {
       ))}
 
       <Link
-        to={`results?q=${keyWord}`}
+        to={`/results?q=${keyWord}`}
         style={{
           width: "100%",
           backgroundColor: "#111",
@@ -31,6 +31,8 @@ const ListResults = ({ results, loading, keyWord }) => {
           border: "none",
           borderRadius: "10px",
           fontSize: "16px",
+          display: "block",
+          textAlign: "center",
         }}
       >
         All results

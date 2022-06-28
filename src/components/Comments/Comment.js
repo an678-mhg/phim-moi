@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import "./Comment.css";
 import "boxicons";
 import { postComment } from "../../actions/fireStoreActions";
@@ -54,7 +54,7 @@ const Comment = ({ movieId }) => {
         />
 
         <div className="show-comment">
-          {document?.map((item) => {
+          {document.map((item) => {
             if (item.responseTo === null) {
               return (
                 <CommentItem
@@ -65,6 +65,8 @@ const Comment = ({ movieId }) => {
                 />
               );
             }
+
+            return null;
           })}
         </div>
       </form>

@@ -16,7 +16,7 @@ const SeasonItem = ({ item, seasonCurrent, setSeasonCurrent, id }) => {
     };
 
     getEsp(item.season_number, id);
-  }, []);
+  }, [id, item.season_number]);
 
   return (
     <div

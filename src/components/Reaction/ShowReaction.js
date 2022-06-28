@@ -10,6 +10,7 @@ const ShowReaction = ({ reactions }) => {
       if (!arrTmp.includes(item.type)) {
         arrTmp.push(item.type);
       }
+      return null;
     });
 
     setTotalTypeReaction(arrTmp);

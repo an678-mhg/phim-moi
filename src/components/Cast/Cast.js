@@ -21,7 +21,10 @@ function Cast() {
           setCast(cast.cast.slice(0, 10));
           setLoading(false);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+        });
     };
 
     setLoading(true);

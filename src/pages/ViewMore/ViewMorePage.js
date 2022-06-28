@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { API_KEY, BASE_URL } from "../../utils/constans";
 import MovieItem from "../../components/Movie/MovieItem";
@@ -26,8 +26,8 @@ function ViewMorePage() {
     setPage(page + 1);
   };
 
-  useEffect(() => {
-    const getViewMore = (media_type, type) => {
+  const getViewMore = useCallback(
+    (media_type, type) => {
       let apiViewMore = "";
       if (type === "trending") {
         apiViewMore = `${BASE_URL}/${type}/${media_type}/week?api_key=${API_KEY}&page=${page}`;
@@ -39,17 +39,23 @@ function ViewMorePage() {
         fetch(`${apiViewMore}`)
           .then((res) => res.json())
           .then((data) => {
-            setMovie([...movie, ...data.results]);
+            setMovie((prev) => [...prev, ...data.results]);
             setTotalPage(data.total_pages);
             setLoading(false);
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            console.log(err);
+            setLoading(false);
+          });
       }
-    };
+    },
+    [page]
+  );
 
+  useEffect(() => {
     setLoading(true);
     getViewMore(media_type, type);
-  }, [page]);
+  }, [page, getViewMore, media_type, type]);
 
   return (
     <div className="container">

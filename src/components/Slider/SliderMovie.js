@@ -36,21 +36,20 @@ const SliderMovie = ({ type }) => {
 
   useEffect(() => {
     const getMovie = () => {
-      try {
-        fetch(
-          type === "trending"
-            ? `${BASE_URL}/trending/movie/week?api_key=${API_KEY}`
-            : `${BASE_URL}/movie/${type}?api_key=${API_KEY}`
-        )
-          .then((res) => res.json())
-          .then(async (data) => {
-            await setMovie(data.results);
-            setLoading(false);
-          })
-          .catch((err) => console.log(err));
-      } catch (error) {
-        console.log(error);
-      }
+      fetch(
+        type === "trending"
+          ? `${BASE_URL}/trending/movie/week?api_key=${API_KEY}`
+          : `${BASE_URL}/movie/${type}?api_key=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then(async (data) => {
+          await setMovie(data.results);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+        });
     };
 
     setLoading(true);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router";
+import { useParams } from "react-router";
 import { API_KEY, BASE_URL } from "../../utils/constans";
 import Button from "../../components/Button/Button";
 import "./Details.css";
@@ -24,8 +24,6 @@ function DetailsMovie() {
   const [loadingAddMovie, setLoadingAddMovie] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     const getDetailsMovie = (media_type, id) => {
       fetch(`${BASE_URL}/${media_type}/${id}?api_key=${API_KEY}`)
@@ -36,7 +34,7 @@ function DetailsMovie() {
         })
         .catch((err) => {
           console.log(err);
-          navigate("/error-page");
+          setLoading(false);
         });
     };
 
@@ -54,7 +52,7 @@ function DetailsMovie() {
         viewAt: Date.now(),
       });
     }
-  }, [data]);
+  }, [data, media_type]);
 
   const handleAddToFavorites = async () => {
     if (!user) return toast.error("You are not logged in");
@@ -96,9 +94,9 @@ function DetailsMovie() {
             </div>
             <div className="details-info">
               {loading ? (
-                <>
-                  <h1 className="mr-bottom-20px skeleton skeleton-text h-36px"></h1>
-                </>
+                <h1 className="mr-bottom-20px skeleton skeleton-text h-36px">
+                  {""}
+                </h1>
               ) : (
                 <h1 className={`details-info-title`}>
                   {data.name || data.title}

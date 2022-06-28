@@ -48,7 +48,9 @@ function Watch() {
         .then((data) => {
           setEspCurrent(data);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+        });
     };
 
     getEspCurrent(id, season, esp);
@@ -78,6 +80,8 @@ function Watch() {
                 />
               );
             }
+
+            return null;
           })}
         </div>
       </div>
