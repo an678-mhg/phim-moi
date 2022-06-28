@@ -1,15 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Title from "../../utils/Title";
 import Tippy from "@tippyjs/react/headless";
 import "./Search.css";
+import ListResults from "../../components/Result/ListResults";
+import { API_KEY, BASE_URL } from "../../utils/constans";
 
 function Search() {
   const [keyWord, setKeyWord] = useState("");
+  const [result, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const timeoutRef = useRef(null);
   const navigate = useNavigate();
 
   const onChangeInput = (e) => {
     setKeyWord(e.target.value);
+    const value = e.target.value;
+
+    if (!value.trim()) return setResults([]);
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      if (value.trim()) {
+        setLoading(true);
+        fetch(`${BASE_URL}/search/multi?api_key=${API_KEY}&query=${value}`)
+          .then((res) => res.json())
+          .then((data) => {
+            setResults(data.results);
+            setLoading(false);
+          })
+          .catch((err) => {
+            setLoading(false);
+            console.log(err);
+          });
+      }
+    }, 500);
   };
 
   const onSubmitForm = (e) => {
@@ -24,7 +52,19 @@ function Search() {
       {/* Change document title */}
       <Title title={"Search"} />
 
-      <Tippy render={(attrs) => <div {...attrs}>My tippy box</div>}>
+      <Tippy
+        interactive
+        placement="bottom-start"
+        render={(attrs) => (
+          <ListResults
+            keyWord={keyWord}
+            loading={loading}
+            results={result}
+            {...attrs}
+          />
+        )}
+        visible={result.length > 0}
+      >
         <div className="search-input">
           <input
             onChange={onChangeInput}

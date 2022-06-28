@@ -5,7 +5,13 @@ function CastItem({ data }) {
   const { name, character, profile_path } = data;
   return (
     <div className="cast-item">
-      <div style={{ aspectRatio: "16/9" }}>
+      <div
+        style={{
+          aspectRatio: "9/16",
+          backgroundColor: "#222",
+          borderRadius: "10px",
+        }}
+      >
         <ImageFade
           lazy_src={
             profile_path

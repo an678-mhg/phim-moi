@@ -1,6 +1,5 @@
 .movie-item img {
   width: 100%;
-  transition: all 0.4s linear;
 }
 
 .movie-item img:hover {

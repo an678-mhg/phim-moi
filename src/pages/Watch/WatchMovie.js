@@ -5,6 +5,8 @@ import SimularColumn from "../../components/Simular/SimularColumn";
 import "./Watch.css";
 import Title from "../../utils/Title";
 import Comment from "../../components/Comments/Comment";
+import EmbedVideoMovie from "../../components/Movie/EmbedVideoMovie";
+import MovieInfo from "../../components/Movie/MovieInfo";
 
 function WatchMovie() {
   const params = useParams();
@@ -25,29 +27,12 @@ function WatchMovie() {
 
   return (
     <div className="container">
-      {/* Change document title */}
       <Title title={`${info?.title} | Watch`} />
 
       <div className="watch-movie-container">
         <div className="watch-wrap">
-          <div className="watch-movie">
-            <iframe
-              width="100%"
-              height={"100%"}
-              src={`https://www.2embed.ru/embed/tmdb/movie?id=${id}`}
-              title="Movie player"
-              frameBorder="0"
-              allowFullScreen
-            />
-          </div>
-          <div className="watch-tv-in4">
-            <h1 className="movie-name">{info.title}</h1>
-            <p className="movie-overview">{info.overview}</p>
-            <p className="movie-release_date">
-              Release date: {info.release_date}
-            </p>
-          </div>
-
+          <EmbedVideoMovie id={id} />
+          <MovieInfo info={info} />
           <Comment movieId={id} />
         </div>
         <div className="simularMovie">

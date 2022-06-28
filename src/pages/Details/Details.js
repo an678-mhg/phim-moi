@@ -171,7 +171,12 @@ function DetailsMovie() {
       <div className="container">
         <p className="homepage">
           Homepage:{" "}
-          <a target="_blank" className="homepage-link" href={data.homepage}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="homepage-link"
+            href={data.homepage}
+          >
             {data.homepage}
           </a>
         </p>

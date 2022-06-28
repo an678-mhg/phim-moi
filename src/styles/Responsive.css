@@ -13,12 +13,6 @@
   .searchResults-container {
     grid-template-columns: 1fr;
   }
-  .watch-tv-link {
-    height: 150px;
-  }
-  .esp-list {
-    height: 80px;
-  }
   .banner-info {
     width: 100%;
   }
@@ -83,9 +77,6 @@
     font-size: 20px;
     color: #fff;
   }
-  .esp-list {
-    height: 150px;
-  }
   .toggle-menu-icon {
     display: flex !important;
   }
@@ -94,6 +85,9 @@
   }
   .banner-info-title {
     font-size: 16px;
+  }
+  .watch-tv-season-img {
+    width: 30%;
   }
 }
 
@@ -108,20 +102,21 @@
   .searchResults-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .esp-list {
-    height: 100px;
-  }
   .grid-layout {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .skeleton-img {
     height: 350px;
   }
-  .esp-item-img {
-    width: 30%;
-  }
   .banner-info-title {
     font-size: 25px;
+  }
+  .info-esp-season {
+    flex: 1;
+    border-bottom-left-radius: 0px;
+  }
+  .watch-tv-season-img {
+    width: 20%;
   }
 }
 
@@ -154,19 +149,6 @@
   }
   .watch-tv-link {
     flex-direction: row;
-    height: 200px;
-  }
-  .watch-tv-season-img {
-    width: 40%;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 0px;
-  }
-  .info-esp-season {
-    width: 60%;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 0px;
   }
   .deltele-favorite {
     display: block !important;

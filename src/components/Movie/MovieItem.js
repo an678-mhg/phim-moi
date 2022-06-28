@@ -15,9 +15,10 @@ function MovieItem({ data }) {
         }
         alt={data.title ? data.title : data.name}
       />
-      <p className="movie-title line-clamp-2">
-        {data.title ? data.title : data.name}
-      </p>
+
+      <div className="movie-title">
+        <p className="line-clamp-1">{data.title ? data.title : data.name}</p>
+      </div>
     </div>
   );
 }
