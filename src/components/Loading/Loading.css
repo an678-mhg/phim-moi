@@ -5,28 +5,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.616);
+  background-color: #111;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.square-loading {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(231, 76, 60);
-  border-radius: 8px;
-  animation: flip 1.2s ease-in-out infinite;
-}
-@keyframes flip {
-  0% {
-    transform: perspective(200px) rotateX(0) rotateY(0);
-  }
-  50% {
-    transform: perspective(200px) rotateX(180deg) rotateY(0);
-  }
-  100% {
-    transform: perspective(200px) rotateX(180deg) rotateY(180deg);
-  }
 }

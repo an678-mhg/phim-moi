@@ -1,10 +1,11 @@
 import React from "react";
+import { FadingBalls } from "react-cssfx-loading";
 import "./Loading.css";
 
 const Loading = () => {
   return (
     <div className="ovelay">
-      <div className="square-loading"></div>
+      <FadingBalls color="rgb(231, 76, 60)" />
     </div>
   );
 };

@@ -1,15 +1,15 @@
 .login-form {
   position: absolute;
   z-index: 2;
-  width: 350px;
+  width: 400px;
   max-width: calc(100% - 16px);
-  background-color: #222;
   border-radius: 10px;
   padding: 15px;
+  background-color: #111;
 }
 
 .login-form-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 25px;
   color: #fff;
 }
@@ -23,17 +23,19 @@
 .login-form-button {
   margin: 10px 0;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+  font-weight: 600;
+  transition: 0.4s;
 }
 
 .login-form-button span {
   margin-left: 10px;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .login-form-google {

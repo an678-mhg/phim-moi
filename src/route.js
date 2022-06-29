@@ -1,4 +1,4 @@
-import Content from "./pages/Home/Content";
+import Content from "./pages/Home/Home";
 import ViewMorePage from "./pages/ViewMore/ViewMorePage";
 import DetailsMovie from "./pages/Details/Details";
 import Search from "./pages/Search/Search";

@@ -26,7 +26,7 @@ const LoginForm = () => {
 
   return (
     <div className="login-form">
-      <h1 className="login-form-title">Login Now</h1>
+      <h1 className="login-form-title">Sign In</h1>
       <div className="login-form-social">
         <button
           className={`login-form-button login-form-google ${

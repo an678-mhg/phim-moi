@@ -16,7 +16,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-page">
-      <Title title={"Login Page"} />
+      <Title title={"Sign In | Phim Moi"} />
       <LoginForm />
 
       {loading && <Loading />}

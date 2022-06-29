@@ -21,8 +21,10 @@ function CastItem({ data }) {
           alt={name}
         />
       </div>
-      <p className="cast-name">{name} </p>
-      <p className="cast-character">{character}</p>
+      <div style={{ marginTop: "10px" }}>
+        <p className="cast-name">{name} </p>
+        <p className="cast-character">{character}</p>
+      </div>
     </div>
   );
 }
