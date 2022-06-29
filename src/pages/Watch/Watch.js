@@ -58,7 +58,9 @@ function Watch() {
 
   return (
     <div className="container">
-      <Title title={`${nameTv} | season ${season} | episode ${esp}`} />
+      <Title
+        title={`${nameTv} | Season ${season} | Episode ${esp} | Phim Moi`}
+      />
 
       <div className="watch-tv-container">
         <div className="watch-wrap">

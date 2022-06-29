@@ -59,7 +59,7 @@ function SearchResults() {
   return (
     <div className="container">
       {/* Change document title */}
-      <Title title={`Result for ${keyword}`} />
+      <Title title={`Results for ${keyword}`} />
 
       <div className="searchResults">
         <h1 className="searchResults-title">Results for {`"${keyword}"`}</h1>

@@ -1,7 +1,8 @@
 .search {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 150px;
   min-height: 100vh;
   animation: fadeIn linear 0.3s;
   transition: all linear 0.3s;

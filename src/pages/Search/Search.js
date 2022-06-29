@@ -50,7 +50,7 @@ function Search() {
   return (
     <form onSubmit={onSubmitForm} className="search">
       {/* Change document title */}
-      <Title title={"Search"} />
+      <Title title={"Search movies and tv-shows"} />
 
       <Tippy
         interactive

@@ -27,7 +27,7 @@ function WatchMovie() {
 
   return (
     <div className="container">
-      <Title title={`${info?.title} | Watch`} />
+      <Title title={`${info?.title} | Watch | Phim Moi`} />
 
       <div className="watch-movie-container">
         <div className="watch-wrap">

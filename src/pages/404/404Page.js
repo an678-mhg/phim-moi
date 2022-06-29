@@ -6,11 +6,12 @@ import "./404.css";
 const ErrorPage = () => {
   return (
     <>
-      <Title title={"404 Page"} />
+      <Title title={"Something went wrong!"} />
+
       <div className="error">
         <div className="error-body container">
-          <h1 className="error-title">Oops!</h1>
-          <p className="error-description">404-Page Not Found</p>
+          <h1 className="error-title">404</h1>
+          <p className="error-description">Something went wrong!</p>
           <Link to="/">Go to HomePage</Link>
         </div>
       </div>

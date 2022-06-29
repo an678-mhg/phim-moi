@@ -43,7 +43,7 @@ const Tv_Shows = () => {
 
   return (
     <div className="margin-top container">
-      <Title title={"Tv_Shows"} />
+      <Title title={"Tv-Shows | Phim Moi"} />
       <h1
         style={{
           color: "#fff",

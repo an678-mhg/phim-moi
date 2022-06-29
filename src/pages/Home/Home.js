@@ -12,7 +12,7 @@ function Content() {
   return (
     <>
       <div>
-        <Title title={"Phim Moi"} />
+        <Title title={"Phim Moi | Watching and stream movie free"} />
         <Banner />
 
         <div className="container">

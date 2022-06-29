@@ -43,7 +43,7 @@ const Movies = () => {
 
   return (
     <div className="margin-top container">
-      <Title title={"Movies"} />
+      <Title title={"Movies | Phim Moi"} />
 
       <h1
         style={{

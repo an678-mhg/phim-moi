@@ -1,13 +1,16 @@
 export const addMovieLocal = (movie) => {
-  const historyMovie = localStorage.getItem("phimmoi-history")
+  let historyMovie = localStorage.getItem("phimmoi-history")
     ? JSON.parse(localStorage.getItem("phimmoi-history"))
     : [];
 
   const existMovie = historyMovie.some((p) => p.id === movie.id);
-  if (!existMovie) {
-    historyMovie.push(movie);
-    localStorage.setItem("phimmoi-history", JSON.stringify(historyMovie));
+
+  if (existMovie) {
+    historyMovie = historyMovie.filter((item) => item.id !== movie.id);
   }
+
+  historyMovie.push(movie);
+  localStorage.setItem("phimmoi-history", JSON.stringify(historyMovie));
 };
 
 export const getMovieHistory = () => {
