@@ -71,9 +71,9 @@ const Reaction = ({ comment, setShowReaction, showReaction }) => {
             src={item.image}
             alt={item.name}
           />
-          {comment?.reactions.some((item) => item.userId === user.uid) &&
-            comment?.reactions.find((item) => item.userId === user.uid).type ===
-              item.name && <span className="dotted-blue" />}
+          {comment?.reactions.some((item) => item.userId === user?.uid) &&
+            comment?.reactions.find((item) => item.userId === user?.uid)
+              .type === item.name && <span className="dotted-blue" />}
         </div>
       ))}
     </div>
