@@ -6,7 +6,7 @@ const EmbedVideoMovie = ({ id }) => {
       <iframe
         width="100%"
         height={"100%"}
-        src={`https://2embed.org/embed/${id}`}
+        src={`https://www.2embed.to/embed/tmdb/movie?id=${id}`}
         title="Movie player"
         frameBorder="0"
         allowFullScreen

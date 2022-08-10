@@ -6,7 +6,7 @@ const EmbedVideoTv = ({ id, seasonTv, espTv }) => {
       <iframe
         width={"100%"}
         height={"100%"}
-        src={`https://2embed.org/embed/${id}/${seasonTv}/${espTv}`}
+        src={`https://www.2embed.to/embed/tmdb/tv?id=${id}&s=${seasonTv}&e=${espTv}`}
         frameBorder="0"
         title="tvShow"
         className="watch-tv-iframe"
