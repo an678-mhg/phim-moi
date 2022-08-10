@@ -1,5 +1,5 @@
 .header {
-  padding: 16px;
+  padding: 10px;
   font-size: 30px;
   color: #fff;
   transition: 0.7s;
@@ -117,7 +117,7 @@
 .bnt-login {
   border: none;
   background-color: #e74c3c;
-  padding: 8px 16px;
+  padding: 5px 10px;
   border-radius: 4px;
   margin-left: 20px;
   color: #fff;
