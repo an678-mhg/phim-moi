@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useStore } from "../../stored/store";
+import { useStore } from "../../stored";
 import { calculateCreatedTime } from "../../utils/constans";
 import Reaction from "../Reaction/Reaction";
 import ShowReaction from "../Reaction/ShowReaction";

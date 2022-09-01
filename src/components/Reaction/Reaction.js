@@ -1,7 +1,7 @@
 import { doc, updateDoc } from "firebase/firestore";
 import React from "react";
 import { db } from "../../config/firebase";
-import { useStore } from "../../stored/store";
+import { useStore } from "../../stored";
 import reactionGif from "../../utils/reactionGif";
 
 const Reaction = ({ comment, setShowReaction, showReaction }) => {

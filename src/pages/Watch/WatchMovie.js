@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY, BASE_URL } from "../../utils/constans";
 import SimularColumn from "../../components/Simular/SimularColumn";
-import "./Watch.css";
-import Title from "../../utils/Title";
+import Title from "../../components/Shared/Title";
 import Comment from "../../components/Comments/Comment";
 import EmbedVideoMovie from "../../components/Movie/EmbedVideoMovie";
 import MovieInfo from "../../components/Movie/MovieInfo";
+import "./Watch.css";
 
 function WatchMovie() {
   const params = useParams();

@@ -4,7 +4,7 @@ import MovieItem from "../../components/Movie/MovieItem";
 import Skeleton from "../../components/Skeleton/Skeleton";
 import { useSearchParams } from "../../hook/useSearchParams";
 import { BASE_URL, API_KEY } from "../../utils/constans";
-import Title from "../../utils/Title";
+import Title from "../../components/Shared/Title";
 
 function SearchResults() {
   const searchParams = useSearchParams();

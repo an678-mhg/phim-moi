@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import "./Comment.css";
 import "boxicons";
 import { postComment } from "../../actions/fireStoreActions";
-import { useStore } from "../../stored/store";
+import { useStore } from "../../stored";
 import Input from "./Input";
 import CommentItem from "./CommentItem";
 import useFireStore from "../../hook/useFireStore";

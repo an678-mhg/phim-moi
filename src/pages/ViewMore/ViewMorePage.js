@@ -3,9 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { API_KEY, BASE_URL } from "../../utils/constans";
 import MovieItem from "../../components/Movie/MovieItem";
 import Skeleton from "../../components/Skeleton/Skeleton";
+import Title from "../../components/Shared/Title";
 import "./ViewMorePage.css";
 import "boxicons";
-import Title from "../../utils/Title";
 
 function ViewMorePage() {
   const { media_type, type } = useParams();

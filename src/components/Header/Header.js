@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { useStore } from "../../stored/store";
+import { useStore } from "../../stored";
 import NavUser from "./NavUser";
 
 function Header() {

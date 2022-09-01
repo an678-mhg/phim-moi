@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import Title from "../../utils/Title";
+import Title from "../../components/Shared/Title";
 import Tippy from "@tippyjs/react/headless";
-import "./Search.css";
 import ListResults from "../../components/Result/ListResults";
 import { API_KEY, BASE_URL } from "../../utils/constans";
+import "./Search.css";
 
 function Search() {
   const [keyWord, setKeyWord] = useState("");

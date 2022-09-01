@@ -1,11 +1,11 @@
 import React from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import "./LoginPage.css";
-import Title from "../../utils/Title";
+import Title from "../../components/Shared/Title";
 import { Navigate } from "react-router-dom";
 import Loading from "../../components/Loading/Loading";
-import { useStore } from "../../stored/store";
+import { useStore } from "../../stored";
 import { useSearchParams } from "../../hook/useSearchParams";
+import "./LoginPage.css";
 
 const LoginPage = () => {
   const { user, loading } = useStore((state) => state);

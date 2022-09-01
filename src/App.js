@@ -6,9 +6,9 @@ import { routes } from "./route";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase";
-import { useStore } from "./stored/store";
+import { useStore } from "./stored";
 import { fetchMovieFavorite } from "./actions/fireStoreActions";
-import PrivateRoute from "./utils/PrivateRoute";
+import PrivateRoute from "./components/Shared/PrivateRoute";
 import FavoriteList from "./pages/FavoriteList/FavoriteList";
 import Loading from "./components/Loading/Loading";
 

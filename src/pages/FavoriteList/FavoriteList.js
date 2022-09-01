@@ -4,8 +4,8 @@ import { toast } from "react-toastify";
 import { deleteFavoriteMovie } from "../../actions/fireStoreActions";
 import MovieItem from "../../components/Movie/MovieItem";
 import Loading from "../../components/Loading/Loading";
-import { useStore } from "../../stored/store";
-import Title from "../../utils/Title";
+import { useStore } from "../../stored";
+import Title from "../../components/Shared/Title";
 import "./Favorite.css";
 
 const FavoriteList = () => {

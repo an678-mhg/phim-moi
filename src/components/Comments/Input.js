@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import nonAvatar from "../../utils/user-non-avatar.png";
 import { useLocation } from "react-router-dom";
 
 const Input = ({ user, comment, setComment, loading }) => {
@@ -11,7 +10,7 @@ const Input = ({ user, comment, setComment, loading }) => {
       <img
         className="avatar"
         alt="avatar"
-        src={user ? user?.photoURL : nonAvatar}
+        src={user ? user?.photoURL : "/user-non-avatar.png"}
       />
 
       <div className="comment-control">

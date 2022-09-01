@@ -1,5 +1,5 @@
 import React from "react";
-import ImageFade from "../ImgFade/ImgFade";
+import ImageFade from "../Shared/ImgFade";
 import "./MovieItem.css";
 
 function MovieItem({ data }) {

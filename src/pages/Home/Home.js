@@ -4,7 +4,7 @@ import RecentlySlider from "../../components/Slider/RecentlySlider";
 import SliderMovie from "../../components/Slider/SliderMovie";
 import SliderTv from "../../components/Slider/SliderTv";
 import { getMovieHistory } from "../../utils/localStro";
-import Title from "../../utils/Title";
+import Title from "../../components/Shared/Title";
 
 function Content() {
   const historyWatch = useMemo(getMovieHistory, []);

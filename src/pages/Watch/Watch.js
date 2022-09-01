@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL, API_KEY } from "../../utils/constans";
 import Simular from "../../components/Simular/Simular";
-import Title from "../../utils/Title";
+import Title from "../../components/Shared/Title";
 import Comment from "../../components/Comments/Comment";
 import SeasonItem from "../../components/TV/SeasonItem";
 import TVInfo from "../../components/TV/TVInfo";

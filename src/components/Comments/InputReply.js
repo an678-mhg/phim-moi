@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { postComment } from "../../actions/fireStoreActions";
-import nonAvatar from "../../utils/user-non-avatar.png";
 
 const InputReply = ({ user, commentParentId, movieId, setShowReply }) => {
   const [comment, setComment] = useState("");
@@ -29,7 +28,7 @@ const InputReply = ({ user, commentParentId, movieId, setShowReply }) => {
       <img
         className="avatar"
         alt="avatar"
-        src={user ? user?.photoURL : nonAvatar}
+        src={user ? user?.photoURL : "/user-non-avatar.png"}
       />
 
       <div className="comment-control" style={{ marginTop: "20px" }}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "../stored/store";
+import { useStore } from "../../stored";
 import { Navigate, useLocation } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {

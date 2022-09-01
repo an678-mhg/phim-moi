@@ -4,7 +4,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "../../config/firebase";
 import { addUser } from "../../actions/fireStoreActions";
 import { toast } from "react-toastify";
-import { useStore } from "../../stored/store";
+import { useStore } from "../../stored";
 
 const LoginForm = () => {
   const { setLoading, loading } = useStore((state) => state);
