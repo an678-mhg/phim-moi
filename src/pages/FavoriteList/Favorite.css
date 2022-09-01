@@ -1,8 +1,6 @@
 .favorite {
   margin-bottom: 40px;
   margin-top: 80px;
-  height: 100vh;
-  overflow-y: scroll;
 }
 
 .favorite-title {

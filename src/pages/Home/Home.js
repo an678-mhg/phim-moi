@@ -11,7 +11,7 @@ function Content() {
 
   return (
     <>
-      <div>
+      <div className="home-page">
         <Title title={"Phim Moi | Watching and stream movie free"} />
         <Banner />
 

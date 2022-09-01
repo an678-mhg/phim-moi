@@ -2,9 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import ErrorPage from "./pages/404/404Page";
 import Footer from "./components/Footer/Footer";
-import { route } from "./route";
-import "./App.css";
-import "./styles/Responsive.css";
+import { routes } from "./route";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase";
@@ -51,7 +49,7 @@ function App() {
         <Header />
 
         <Routes>
-          {route.map((item) => (
+          {routes.map((item) => (
             <Route
               key={item.path}
               path={item.path}

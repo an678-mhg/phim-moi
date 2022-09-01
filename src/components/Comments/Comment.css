@@ -25,14 +25,14 @@
   border-bottom-left-radius: 10px;
   outline: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   max-width: 100%;
   width: 100%;
 }
 
 .comment-control input::placeholder {
-  font-size: 14px;
-  color: #3498db;
+  font-size: 16px;
+  color: #fff;
   opacity: 0.6;
 }
 

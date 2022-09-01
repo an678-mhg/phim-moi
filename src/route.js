@@ -6,10 +6,8 @@ import SearchResults from "./pages/Search/SearchResults";
 import WatchTv from "./pages/Watch/Watch";
 import WatchMovie from "./pages/Watch/WatchMovie";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import Movies from "./pages/Movies/Movies";
-import Tv_Shows from "./pages/Tv_Shows/Tv_Shows";
 
-export const route = [
+export const routes = [
   {
     path: "/",
     element: Content,
@@ -21,14 +19,6 @@ export const route = [
   {
     path: "/login",
     element: LoginPage,
-  },
-  {
-    path: "/movies",
-    element: Movies,
-  },
-  {
-    path: "/tv_shows",
-    element: Tv_Shows,
   },
   {
     path: "/results",

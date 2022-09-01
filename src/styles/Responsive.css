@@ -13,53 +13,8 @@
   .searchResults-container {
     grid-template-columns: 1fr;
   }
-  .banner-info {
-    width: 100%;
-  }
-  .banner-poster {
-    display: none;
-  }
-  .banner-content {
-    margin-top: 40px;
-  }
   .grid-layout {
     grid-template-columns: 1fr 1fr;
-  }
-  .header-list .header-logo {
-    display: none;
-  }
-  .header-list {
-    position: fixed;
-    top: 0;
-    background-color: #111;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    left: 0;
-  }
-  .nav-menu {
-    width: 100%;
-    flex-direction: column;
-    margin-left: 0 !important;
-  }
-  ul.nav-menu li {
-    text-align: center;
-    width: 100%;
-    padding: 10px 20px;
-    position: relative;
-  }
-  ul.nav-menu li a.active::after {
-    content: "";
-    width: 4px;
-    height: 100%;
-    background-color: #e74c3c;
-    right: 0;
-    top: 0;
-    bottom:0;
-    position: absolute;
-    border-radius: 4px;
   }
   .genres-list {
     position: static;
@@ -122,6 +77,9 @@
 
 /* Tablet and Mobile */
 @media (max-width: 1023px) {
+  .home-page {
+    margin-top: 80px;
+  }
   .details-poster {
     width: 300px;
     text-align: center;
@@ -157,18 +115,8 @@
   .watch-tv-other-season {
     margin-top: 40px;
   }
-  .banner-poster {
-    display: none;
-  }
-  .banner-info-overview {
-    display: none;
-  }
-
-  .banner::after {
-    display: none;
-  }
   .banner {
-    aspect-ratio: 16/10;
+    display: none;
   }
 }
 

@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn ease-in 0.4s;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

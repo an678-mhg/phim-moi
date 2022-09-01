@@ -4,6 +4,8 @@ import App from "./App";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
+import "./styles/Responsive.css";
 
 ReactDOM.render(
   <React.StrictMode>
