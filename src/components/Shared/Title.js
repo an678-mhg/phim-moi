@@ -3,11 +3,7 @@ import { useEffect } from "react";
 
 const Title = ({ title }) => {
   useEffect(() => {
-    if (title === "undefined") {
-      document.title = "Phim Moi";
-    } else {
-      document.title = title;
-    }
+    document.title = title || "Phim Moi | Watching and stream movie free";
   });
 
   return <></>;
